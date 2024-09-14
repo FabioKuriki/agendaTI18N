@@ -1,5 +1,7 @@
 <x-layout titulo="Cadastrar">
-    <form class="container" action="" method="GET">
+    <!-- Na action foi colocado a rota com o método -->
+    <form class="container" action="cadastrar/salvar" method="GET">
+        @csrf <!--Utilizar a classe control, usar sempre que houver entrada de dados--> 
         <div class="mb-3">
             <label for="dataCompromisso" class="form-label">Data Compromisso:</label>
             <input type="date" class="form-control" id="dataEvento" name="dataEvento">

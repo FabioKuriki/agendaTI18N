@@ -38,3 +38,11 @@ Route::get('/excluir', function(){
 Route::get('/editar', function(){
     return view('paginas/editar');
 });
+
+
+//As rotas utilizando o padrão MVC
+Route::get('/cadastrar',[\App\Http\Controllers\registrarAtividadeController::class, 'index']); //Indo para classe controler e executando o método index
+
+Route::get('/cadastrar/salvar',[\App\Http\Controllers\registrarAtividadeController::class, 'store']);
+
+Route::get('/consultar', [\App\Http\Controllers\registrarAtividadeController::class, 'consultar']);

@@ -1,4 +1,5 @@
 <x-layout titulo="Consultar">
+    @csrf
     <table class="table">
         <thead>
             <tr>
@@ -13,7 +14,7 @@
             <!-- Enquanto tiver ID no banco -->
             <!-- TH == coluna de referência, seria as letras no excel -->
             <!-- $ids está pegando a id -->
-            @foreach($ids as id)
+            @foreach($ids as $id)
             <tr>
                 <th scope="rol">{{$id->id}}</th>
                 <!-- Pegar os valores do id -->
