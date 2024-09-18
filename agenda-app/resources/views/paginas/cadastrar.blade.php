@@ -13,7 +13,6 @@
         </div>
         <!-- Submit atualizar a pagina -->
         <button type="submit" class="btn btn-primary">Salvar</button>
-        <a class="btn btn-primary" href="atualizar">Atualizar</a>
         <a class="btn btn-primary" href="consultar">Consultar</a>
     </form>
 </x-layout>

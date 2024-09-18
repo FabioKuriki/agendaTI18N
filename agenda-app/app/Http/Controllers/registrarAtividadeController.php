@@ -31,4 +31,20 @@ class registrarAtividadeController extends Controller
 
         return view('paginas.consultar', compact('ids'));
     }
+
+    public function editar($id)
+    {
+        $dado = registrarEvento::findOrFail($id); //vai buscar o id e se achar mostra linha do dado
+        return view('paginas.editar', compact('dado')); //view pega um valor, enquanto a redirect so redireciona
+    }
+
+    public function atualizar(Request $request, $id){
+        registrarEvento::where('id', $id)->update($request->all());
+        return redirect('/consultar');
+    }
+
+    public function excluir(Request $request, $id){
+        registrarEvento::where('id', $id)->delete($request->all());
+        return redirect('/consultar');
+    }
 }//Fim da classe
